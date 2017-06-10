@@ -3,6 +3,7 @@
 # Dictionary password attack
 
 import crypt
+
 def testPass(cryptPass):
     salt=cryptPass[0:2]
     dictFile=open('dictionary.txt','r')
@@ -14,6 +15,7 @@ def testPass(cryptPass):
             return
     print '[-] Password Not Found.\n'
     return
+
 def main():
     passFile=open('passwords.txt')
     for line in passFile.readlines():
@@ -22,5 +24,6 @@ def main():
             cryptPass=line.split(':')[1].strip(' ')
             print '[*] Cracking Password For: ' + user
             testPass(cryptPass)
+
 if __name__= '__main__':
     main()

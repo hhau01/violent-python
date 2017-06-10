@@ -5,6 +5,7 @@
 import socket
 import os
 import sys
+
 def retbanner(ip, port):
     try:
         socket.setdefaulttimeout(2)
@@ -14,11 +15,13 @@ def retbanner(ip, port):
         return banner
     except:
         return
+
 def checkvulns(banner, filename):
     f=open('filename', 'r')
     for line in f.readlines():
         if line.strip('\n') in banner:
             print '[+] Server is vulnerable: ' + banner.strip('\n')
+
 def main():
     if len(sys.argv) == 2:
         filename = sys.argv[1]
@@ -41,5 +44,6 @@ def main():
                     if banner:
                         print '[+] ' + ip + ': ' + banner
                         checkvulns(banner)
+
 if __name__=='__main__':
     main()
