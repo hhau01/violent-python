@@ -1,6 +1,7 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 
 # DESCRIPTION: Port scanner using python-nmap
+# Usage: python 2-nmapscanner.py -H 192.168.1.37 -p 21,22,80
 
 import nmap
 import optparse

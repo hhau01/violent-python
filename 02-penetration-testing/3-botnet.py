@@ -1,3 +1,7 @@
+#!/usr/bin/env python2
+
+# DESCRIPTION
+
 import pxssh
 import optparse
 import time

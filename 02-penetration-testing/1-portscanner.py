@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 
 # Threaded TCP Port Scanner
 # Usage: python 1-portscanner.py -H 192.168.1.37 -p 21,22,80
@@ -54,5 +54,6 @@ def main():
         print parser.usage
         exit(0)
     portScan(tgtHost, tgtPorts)
+
 if __name__ == '__main__':
     main()

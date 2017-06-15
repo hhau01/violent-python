@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 
 # Dictionary attack on zip file
 # Usage: python 3-zip-cracker.py -f test.zip -d dictionary.txt
